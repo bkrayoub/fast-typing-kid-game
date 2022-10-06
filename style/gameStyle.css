@@ -98,9 +98,10 @@ body {
     height: 100vh;
 }
 .finalform {
+    transition: 1s;
     position: absolute;
-    top: -800px;
     background-color: #fcf2d2;
+    top: -800px;
     z-index: 2;
     display: flex;
     flex-direction: column;

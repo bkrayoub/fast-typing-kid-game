@@ -2,10 +2,12 @@ const words = document.getElementById('words');
 const inputedWord = document.getElementById('wordInput')
 const scoreDisplay = document.getElementById('myScore')
 const timer = document.getElementById('timer')
+const yourScore = document.getElementById('yourScore')
+const bestScore = document.getElementById('yourBestScore')
 
 const vocabulary = ['banana', 'tofaha', 'bti5a', 'dessert', 'maticha'];
 var score = 0;
-var time = 3;
+var time = 20;
 
 
 function displayWord(vocabulary) {
@@ -23,7 +25,14 @@ function countdown() {
     else if (time === 0) {
         time--;
         startGame = false;
-        alert('done')
+        yourScore.innerText = score
+        document.getElementById('finalform').style.top = '0px'
+        if(score >= 5){
+            document.getElementById('comment').innerHTML = "Congratulations, you won this round! Do you want to play again?"
+        }
+        else {
+            document.getElementById('comment').innerHTML = "Unfortunately, you didn't collect enough points to win Try again"
+        }
     }
 }
 
@@ -41,7 +50,7 @@ inputedWord.addEventListener('input', function () {
 function start() {
     displayWord(vocabulary)
     let score = 0;
-    let time = 3;
+    let time = 20;
     timer.innerHTML = time;
     scoreDisplay.innerHTML = score + '/5';
     init()

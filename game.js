@@ -38,7 +38,6 @@ function init()
   inputedWord.addEventListener('input', matching);
   // Countdown for each second
   setInterval(countdown, 1000);
-    // Countdown for each second
 
   
   // Check game status
