@@ -1,0 +1,11 @@
+{
+	"folders": [
+		{
+			"name": "fast-typing-kid-game",
+			"path": "."
+		}
+	],
+	"settings": {
+		"liveServer.settings.multiRootWorkspaceName": "fast-typing-kid-game"
+	}
+}
