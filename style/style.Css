@@ -5,6 +5,20 @@ body {
     padding: 0px;
     font-family: 'Lilita One', cursive;
 }
+#pfp {
+    position: absolute;
+    width: 100px;
+    right: 30px;
+    top: 30px;
+    transition: .33s;
+    filter: hue-rotate(370deg);
+    transition: .33s;
+}
+#pfp:hover {
+    transition: .33s;
+    filter: hue-rotate(370deg);
+    filter: brightness(90%);
+}
 input {
     outline: none;
 }
