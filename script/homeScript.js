@@ -14,3 +14,6 @@ playBtn.addEventListener('keyup', function(){
         }
     }
 });
+function login() {
+    window.location.href = '/auth/index.html'
+}
