@@ -19,13 +19,10 @@ let score = 0;
 let startGame;
 
 // DOM Elements
-const words = document.querySelector('#word-input');
-const currentInput = document.querySelector('#current-input');
-const scoreDisplay = document.querySelector('#score');
-const timer = document.querySelector('#time');
-const message = document.querySelector('#message');
-const wordtime = document.querySelector('#wordtimer');
-
+const words = document.getElementById('words')
+const inputedWord = document.getElementById('wordInput')
+const scoreDisplay = document.getElementById('myScore')
+const timer = document.getElementById('timer')
 
 // List down all the vocabularies in array
 const vocabulary = ['banana','tofaha', 'bti5a', 'dessert', 'maticha'];
@@ -38,7 +35,7 @@ function init()
   // Pick the word
   displayWord(vocabulary);
   //Match the word
-  words.addEventListener('input', matching);
+  inputedWord.addEventListener('input', matching);
   // Countdown for each second
   setInterval(countdown, 1000);
     // Countdown for each second
@@ -55,7 +52,7 @@ function matching()
   {
     startGame = true;
     displayWord(vocabulary);
-    words.value = '';
+    inputedWord.value = '';
     score++;
   }
   
@@ -72,15 +69,14 @@ function matching()
 // Match current input to the word
 function wordMatch() 
 {
-  if (words.value === currentInput.innerHTML) 
+  if (inputedWord.value === words.innerHTML) 
   {
-    
-    message.innerHTML = 'Correct!';
+    console.log('correct!!')
     return true;
 	Audio("correct.mp3");
   } else 
   {
-    message.innerHTML = '';
+    console.log('wrong letters!')
     return false;
   }
 }
@@ -92,7 +88,7 @@ function displayWord(vocabulary)
   // Randomly generate word index
   const randIndex = Math.floor(Math.random() * vocabulary.length);
   // Display the word randomly
-  currentInput.innerHTML = vocabulary[randIndex];
+  words.innerHTML = vocabulary[randIndex];
 }
 
 // Countdown the time
@@ -121,8 +117,7 @@ function checker()
 {
   if (!startGame && time === 0) 
   {
-    message.innerHTML = 'Time is out!';
-    score = -1;
+    console.log('Time is out!');
 
   }
 }
