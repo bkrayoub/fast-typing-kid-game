@@ -1,0 +1,24 @@
+* {
+    font-family: 'Lilita One', cursive;
+}
+body {
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container {
+    width: 1300px;
+    height: 800px;
+    background-image: url(/img/gameBg.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+#words {
+    font-size: 60px;
+}

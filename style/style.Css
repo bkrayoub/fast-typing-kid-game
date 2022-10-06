@@ -5,6 +5,9 @@ body {
     padding: 0px;
     font-family: 'Lilita One', cursive;
 }
+input {
+    outline: none;
+}
 #yellowBg {
     z-index: -1;
     height: 100vh;
@@ -125,21 +128,38 @@ body {
 
 
 #play {
-    z-index: 4;
+    z-index: 0;
     position: absolute;
     background: #FFCD4F;
     border-radius: 47px;     
     border: 0px;
-    background-color: antiquewhite;
     height: 80px;
     width: 300px;
     right: 100px;
     bottom: 60px;
     text-align: center;
     font-size: 25px;
+    box-shadow: 0px -8px 0px 0px rgba(255,223,143,0.75);
+    -webkit-box-shadow: 0px -8px 0px 0px rgba(255,223,143,0.75);
+    -moz-box-shadow: 0px -8px 0px 0px rgba(255,223,143,0.75);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#playBtn::placeholder {
+    color:#51321c7a;
+    text-decoration: underline;
+
+}
+#playBtn {
+    background-color: transparent;
+    border: 0px;
     font-family: 'Lilita One', cursive;
+    font-size: 25px;
+    width: 50px;
 }
 .container {
+    color:#51321C;
     padding-left: 80px;
 }
 h1{
