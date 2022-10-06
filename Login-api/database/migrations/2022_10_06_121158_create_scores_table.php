@@ -15,7 +15,7 @@ return new class extends Migration
     {
         Schema::create('scores', function (Blueprint $table) {
             $table->id();
-            $table->int('score');
+            $table->integer('score');
             $table->bigInteger('userId')->unsigned();
             $table->foreign('userId')->references('id')->on('logins')->onDelete('cascade');
             $table->timestamps();
