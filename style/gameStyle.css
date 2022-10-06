@@ -1,7 +1,12 @@
 * {
     font-family: 'Lilita One', cursive;
+    color:#51321C;
+}
+input {
+    outline: none;
 }
 body {
+    background-color: #fcf2d2;
     margin: 0;
     display: flex;
     justify-content: center;
@@ -20,5 +25,51 @@ body {
     justify-content: center;
 }
 #words {
-    font-size: 60px;
+    color:#ad581c;
+    font-size: 70px;
+}
+.gameRules div {
+    display: flex;
+    flex-direction: column;
+}
+.gameRules {
+    margin: 50px 0px;
+    text-align: center;
+    width: 800px;
+    display: flex;
+    justify-content: space-around;
+}
+.gameRules h2 {
+    margin: 0px;
+    font-size: 40px;
+}
+.gameRules p {
+    color:#ad581c;
+    background-color: #fcf2d2;
+    padding: 10px;
+    font-size: 30px;
+    border-radius: 100px;
+}
+.wordInput {
+    color:#ad581c;
+    font-size: 30px;
+    text-align: center;
+    width: 600px;
+    height: 80px;
+    border: 0px;
+    border-radius: 100px;
+    margin-bottom: 50px;
+}
+.start {
+    background-color: #fcf2d2;
+    border: 0px;
+    border-radius: 100px;
+    margin-bottom: 50px;
+    width: 300px;
+    height: 70px;
+    font-size: 25px;
+}
+.start:hover {
+
+    background-color: #eccf6e;
 }
