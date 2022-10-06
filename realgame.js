@@ -5,7 +5,7 @@ const timer = document.getElementById('timer')
 const yourScore = document.getElementById('yourScore')
 const bestScore = document.getElementById('yourBestScore')
 
-const vocabulary = ['banana', 'tofaha', 'bti5a', 'dessert', 'maticha'];
+const vocabulary = ['red', 'yellow', 'black', 'white', 'blue', 'green', 'grey','banana', 'cat','dog','car','facebook','book','chocolate', 'orange', 'cow','monkey','sun'];
 var score = 0;
 var time = 20;
 
@@ -28,9 +28,11 @@ function countdown() {
         yourScore.innerText = score
         document.getElementById('finalform').style.top = '0px'
         if(score >= 5){
-            document.getElementById('comment').innerHTML = "Congratulations, you won this round! Do you want to play again?"
+            document.getElementById('res').innerText = 'Congratulations!'
+            document.getElementById('comment').innerHTML = "You won this round! Do you want to play again?"
         }
         else {
+            document.getElementById('res').innerText = 'Good luck next time you lost'
             document.getElementById('comment').innerHTML = "Unfortunately, you didn't collect enough points to win Try again"
         }
     }
