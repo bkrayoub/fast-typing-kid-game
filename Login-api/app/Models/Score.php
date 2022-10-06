@@ -14,7 +14,7 @@ class Score extends Model
         'score',
         'userId',
     ];
-    public function login() {
-        return $this->belongsTo(Login::class, 'userId');
+    public function user() {
+        return $this->belongsTo(User::class, 'userId');
     }
 }

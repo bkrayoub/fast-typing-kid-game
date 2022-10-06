@@ -41,4 +41,12 @@ class User extends Authenticatable
     protected $casts = [
         'email_verified_at' => 'datetime',
     ];
+    public function scores() {
+        return $this->hasMany(Score::class)->withDefault(['userId'=>'user id not defined']);
+    }
+
+    public function getId()
+        {
+        return $this->id;
+        }
 }

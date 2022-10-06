@@ -2,8 +2,9 @@
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\AuthUserController;
+use App\Http\Controllers\ScoresController;
 use App\Http\Controllers\LoginController;
-use App\Http\Controllers\ScoreController;
 /*
 
 |--------------------------------------------------------------------------
@@ -20,8 +21,8 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
-Route::get("login",[LoginController::class,'index']);
-Route::post("register",[LoginController::class,'post']);
+Route::apiResource('typingGame', AuthUserController::class);
+Route::post('login', [LoginController::class,'login']);
 
-Route::get("score",[ScoreController::class,'index']);
+Route::apiResource('scores', ScoresController::class);
     

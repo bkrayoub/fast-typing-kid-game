@@ -2,22 +2,23 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Login;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\Auth;
 
 class LoginController extends Controller
 {
-    function index()  {
+    //
+    public function login(Request $request)
+    {
+        $credentials = array(
+            'userName' => $request->get('userName'),
+            'password' => $request->get('password')
+        );
 
-        $get = Login::all();
-            return $get ;
-    }
-    function post(Request $request){
-        $user = new Login();
-
-        $user->userName = $request->userName;
-        $user->password = $request->password;
-        $user->save();
+        if (Auth::attempt($credentials)) 
+        {
+            $request->session()->regenerate();
+        }
         
     }
 }
