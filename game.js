@@ -5,7 +5,7 @@ document.getElementById('btn').addEventListener('click', init);
 const Class = 
 {
   low: 40,
-  middle: 10,
+  middle: 25,
   high: 5
 };
 
